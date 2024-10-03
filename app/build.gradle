@@ -34,7 +34,7 @@ dependencies {
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
-    implementation libs.picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
 
 
     testImplementation libs.junit

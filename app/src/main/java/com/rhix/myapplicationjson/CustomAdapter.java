@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -84,9 +85,12 @@ class CustomAdapter implements ListAdapter {
             ImageView imag=convertView.findViewById(R.id.list_image);
             number.setText(subjectData.Number);
             tittle.setText(subjectData.SubjectName);
-            /*Picasso.with(context)
+            Picasso.get()
                     .load(subjectData.Image)
-                    .into(imag);*/
+                    .error(R.drawable.ic_launcher_background)
+                    .into(imag);
+
+           /* https://square.github.io/picasso/ */
 
         }
         return convertView;
